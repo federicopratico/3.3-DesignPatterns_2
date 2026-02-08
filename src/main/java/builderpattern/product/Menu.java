@@ -19,4 +19,24 @@ public class Menu {
         this.coffee = coffee;
         this.drink = drink;
     }
+
+    public Dish getStarter() {
+        return starter;
+    }
+
+    public MainCourse getMainCourse() {
+        return mainCourse;
+    }
+
+    public Dish getDessert() {
+        return dessert;
+    }
+
+    public Coffee getCoffee() {
+        return coffee;
+    }
+
+    public Drink getDrink() {
+        return drink;
+    }
 }

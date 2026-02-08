@@ -59,6 +59,26 @@ public class MenuBuilder implements IStart, IAfterStarter, IAfterMainCourse, ICa
     }
 
     @Override
+    public MenuBuilder isGlutenFree() {
+        if (mainCourse != null && starter == null) {
+            mainCourse.setGlutenFree();
+        } else if (starter != null) {
+            starter.setGlutenFree();
+        }
+        return this;
+    }
+
+    @Override
+    public MenuBuilder isVegan() {
+        if (mainCourse != null && starter == null) {
+            mainCourse.setVegan();
+        } else if (starter != null) {
+            starter.setVegan();
+        }
+        return this;
+    }
+
+    @Override
     public Menu build() {
         Menu menu = new Menu(starter, mainCourse, dessert, coffee, drink);
         resetBuilder();
