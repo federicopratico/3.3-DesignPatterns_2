@@ -25,7 +25,7 @@ public class Menu {
         return MenuBuilder.newBuilder();
     }
 
-    public static class MenuBuilder implements StarterStep {
+    private static class MenuBuilder implements StarterStep {
         private Dish starter;
         private MainCourse mainCourse;
         private Dish dessert;

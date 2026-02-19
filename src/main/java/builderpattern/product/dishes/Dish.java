@@ -14,11 +14,19 @@ public class Dish {
         dietFlag = new HashSet<>();
     }
 
-   public void setVegan() {
+    public void setVegan() {
         dietFlag.add(Diet.VEGAN);
    }
 
-   public void setGlutenFree() {
+    public void setGlutenFree() {
         dietFlag.add(Diet.GLUTEN_FREE);
-   }
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Set<Diet> getDietFlag() {
+        return dietFlag;
+    }
 }
