@@ -11,6 +11,10 @@ public class StockAgent implements Observable<StockExchangeAgency> {
         this.stock = stock;
     }
 
+    public List<StockExchangeAgency> getObservers() {
+        return List.copyOf(observers);
+    }
+
     public void stockGoesUp(double amount) {
         double newValue = stock.getActualValue() + amount;
         stock.setValue(newValue);

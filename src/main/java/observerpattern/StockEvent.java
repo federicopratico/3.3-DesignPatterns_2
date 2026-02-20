@@ -11,6 +11,10 @@ public class StockEvent {
         return stock.getName();
     }
 
+    public double getActualValue() {
+        return stock.getActualValue();
+    }
+
     public double getLastChangeValue() {
         return stock.getActualValue() - stock.getOldValue();
     }
