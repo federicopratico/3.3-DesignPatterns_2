@@ -1,6 +1,6 @@
 package builderpattern.product;
 
-import builderpattern.builderintefrace.*;
+import builderpattern.builderinterface.*;
 import builderpattern.product.dishes.Coffee;
 import builderpattern.product.dishes.Dish;
 import builderpattern.product.dishes.Drink;

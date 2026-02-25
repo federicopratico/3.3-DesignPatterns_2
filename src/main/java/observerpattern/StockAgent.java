@@ -3,15 +3,15 @@ package observerpattern;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StockAgent implements Observable<StockExchangeAgency> {
+public class StockAgent implements Observable<Observer<StockEvent>> {
     private Stock stock;
-    private final List<StockExchangeAgency> observers = new ArrayList<>();
+    private final List<Observer<StockEvent>> observers = new ArrayList<>();
 
     public StockAgent(Stock stock) {
         this.stock = stock;
     }
 
-    public List<StockExchangeAgency> getObservers() {
+    public List<Observer<StockEvent>> getObservers() {
         return List.copyOf(observers);
     }
 
@@ -28,18 +28,18 @@ public class StockAgent implements Observable<StockExchangeAgency> {
     }
 
     @Override
-    public void attach(StockExchangeAgency observer) {
+    public void attach(Observer<StockEvent> observer) {
         observers.add(observer);
     }
 
     @Override
-    public void detach(StockExchangeAgency observer) {
+    public void detach(Observer<StockEvent> observer) {
         observers.remove(observer);
     }
 
     @Override
     public void notifyObservers() {
-        for(StockExchangeAgency observer : observers) {
+        for(Observer<StockEvent> observer : observers) {
             observer.update(new StockEvent(stock));
         }
     }

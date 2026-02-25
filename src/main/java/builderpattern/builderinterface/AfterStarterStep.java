@@ -1,4 +1,4 @@
-package builderpattern.builderintefrace;
+package builderpattern.builderinterface;
 
 public interface AfterStarterStep {
     AfterStarterStep isVegan();
